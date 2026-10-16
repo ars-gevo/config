@@ -34,13 +34,12 @@ bindsym --to-code $mod+c kill
 bindsym --to-code $mod+Shift+r reload
 bindsym --to-code $mod+Shift+e exit 
 bindsym --to-code $mod+Shift+f exec firefox
+bindsym --to-code $mod+Shift+q exec qutebrowser
 bindsym --to-code $mod+Shift+v exec throne
 bindsym --to-code $mod+Shift+s exec steam
 bindsym --to-code $mod+Shift+c exec idle
-bindsym --to-code $mod+Shift+q exec qutebrowser
 
 
-mouse_warping container
 bindsym --to-code $mod+a focus parent
 bindsym --to-code $mod+$left focus left
 bindsym --to-code $mod+$down focus down
