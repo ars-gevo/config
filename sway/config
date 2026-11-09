@@ -1,9 +1,7 @@
 font pango: JetBrains Mono Nerd Font 12
-default_border pixel 1
-default_floating_border pixel 1
-gaps inner 6
-client.focused    #ffffff #ffffff #000000 #ffffff #ffffff
-client.unfocused  #b0b0b0 #b0b0b0 #888888 #b0b0b0 #b0b0b0
+default_border pixel 0
+default_floating_border pixel 0
+gaps inner 3
 
 exec swayidle -w \
     timeout 300 'swaylock -f -c 000000' \
@@ -29,11 +27,7 @@ bindsym --to-code Mod4+c kill
 bindsym --to-code Mod4+Shift+r reload
 bindsym --to-code Mod4+Shift+e exit 
 bindsym --to-code Mod4+Shift+f exec firefox
-bindsym --to-code Mod4+Shift+q exec qutebrowser
 bindsym --to-code Mod4+Shift+v exec throne
-bindsym --to-code Mod4+Shift+s exec steam
-bindsym --to-code Mod4+Shift+c exec idle
-
 
 bindsym --to-code Mod4+a focus parent
 bindsym --to-code Mod4+h focus left
@@ -108,13 +102,13 @@ bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy -t image/png
 
 bar {
     position top
-    height 22
+    height 16
     status_command ~/.config/sway/status.sh
     colors {
         statusline #ffffff
-        background #000000
-        focused_workspace  #ffffff #000000 #ffffff 
-        inactive_workspace #000000 #000000 #ffffff
+        background #242424
+        focused_workspace  #ffffff #242424 #ffffff 
+        inactive_workspace #242424 #242424 #ffffff
         urgent_workspace   #FF0000 #FF0000 #ffffff
     }
 }
