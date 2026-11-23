@@ -1,14 +1,17 @@
 font pango: JetBrains Mono Nerd Font 12
-default_border pixel 0
-default_floating_border pixel 0
-gaps inner 3
+default_border none
+default_floating_border none
+gaps inner 1
+client.focused    #ffffff #242424 #ffffff
+client.unfocused  #808080 #242424 #ffffff
 
 exec swayidle -w \
     timeout 300 'swaylock -f -c 000000' \
-    timeout 2100 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    timeout 2100 'swaymsg "output * power off"' \
+    resume 'swaymsg "output * power on"' \
     before-sleep 'swaylock -f -c 000000'
 
-seat * hide_cursor 10000
+seat * hide_cursor 5000
 
 input type:touchpad {
     dwt disabled
@@ -27,7 +30,6 @@ bindsym --to-code Mod4+c kill
 bindsym --to-code Mod4+Shift+r reload
 bindsym --to-code Mod4+Shift+e exit 
 bindsym --to-code Mod4+Shift+f exec firefox
-bindsym --to-code Mod4+Shift+v exec throne
 
 bindsym --to-code Mod4+a focus parent
 bindsym --to-code Mod4+h focus left
@@ -102,14 +104,14 @@ bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy -t image/png
 
 bar {
     position top
-    height 16
+    height 14
     status_command ~/.config/sway/status.sh
     colors {
         statusline #ffffff
         background #242424
-        focused_workspace  #ffffff #242424 #ffffff 
+        focused_workspace  #242424 #242424 #ffffff 
         inactive_workspace #242424 #242424 #ffffff
-        urgent_workspace   #FF0000 #FF0000 #ffffff
+        urgent_workspace   #242424 #808080 #ffffff
     }
 }
 
